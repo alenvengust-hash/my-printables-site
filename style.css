@@ -8,16 +8,17 @@
 /* SMALL TOP BANNER */
 .small-banner {
   width: 100%;
-  height: 30px; /* very small */
-  background-color: #f5f5f5; /* white/light gray */
+  height: 30px;
+  background-color: #f0f0f0; /* very visible light gray */
+  z-index: 1;
 }
 
-/* BIG COLORED BANNER */
+/* BIG BANNER */
 .big-banner {
-  width: 100%;
-  height: 250px; /* bigger banner */
-  background-color: #ff9900; /* orange, can change color */
   position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: #00ff1a; /* bold color */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +27,7 @@
 }
 
 .big-banner-content {
-  z-index: 1;
+  z-index: 2;
 }
 
 .big-banner-content h1 {
@@ -39,26 +40,21 @@
   opacity: 0.9;
 }
 
-/* HAMBURGER MENU */
+/* HAMBURGER MENU ON TOP-RIGHT */
 .navbar {
   position: absolute;
   top: 10px;
-  right: 20px; /* top-right corner */
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  z-index: 10; /* in front of everything */
+  right: 20px;
+  z-index: 3; /* in front */
 }
 
-/* MENU */
 .menu-container {
   position: relative;
 }
 
 .hamburger {
-  width: 25px;
+  width: 30px;
   cursor: pointer;
-  z-index: 11;
 }
 
 .hamburger span {
@@ -72,14 +68,14 @@
 .menu {
   position: absolute;
   top: 35px;
-  right: 0; /* align menu to right */
+  right: 0;
   width: 180px;
   background: rgba(0,0,0,0.95);
   border-radius: 6px;
-  transition: right 0.3s ease;
-  padding: 10px 0;
   display: flex;
   flex-direction: column;
+  padding: 10px 0;
+  transition: right 0.3s ease;
 }
 
 .menu a {
@@ -93,7 +89,7 @@
 }
 
 .menu-container:hover .menu {
-  right: 0; /* slide in */
+  right: 0;
 }
 
 /* HERO SECTION */
