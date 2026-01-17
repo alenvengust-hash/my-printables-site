@@ -16,7 +16,7 @@
 /* SLIM ORANGE BANNER */
 .orange-banner {
   width: 100%;
-  height: 60x; /* slimmer */
+  height: 60px; /* slimmer */
   background-color: #1e00ff; /* bold orange */
   position: relative;
   z-index: 2;
