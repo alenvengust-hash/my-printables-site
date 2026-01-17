@@ -22,6 +22,17 @@
   z-index: 2;
 }
 
+/* PRINTIUM NAME ON TOP-LEFT */
+.orange-banner .logo {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 3; /* in front of banner */
+}
+
 /* HAMBURGER MENU ON TOP-RIGHT */
 .navbar {
   position: absolute;
