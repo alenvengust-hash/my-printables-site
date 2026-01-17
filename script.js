@@ -35,3 +35,4 @@ function downloadPrintable(index) {
 
 // Run on page load
 window.onload = showPrintables;
+
