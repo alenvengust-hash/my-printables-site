@@ -8,18 +8,19 @@
 /* SLIM WHITE TOP BANNER */
 .small-banner {
   width: 100%;
-  height: 20px; /* slightly slimmer */
+  height: 20px;
   background-color: #f0f0f0c6;
   z-index: 1;
 }
 
-/* SLIM ORANGE BANNER */
+/* ORANGE BANNER */
 .orange-banner {
   width: 100%;
-  height: 60px; /* slimmer */
+  height: 60px;
   background-color: #1e00ff; /* bold orange */
-  position: relative;
+  position: relative;  /* needed for absolute positioning inside */
   z-index: 2;
+  overflow: visible;   /* ensure logo and menu are visible */
 }
 
 /* PRINTIUM NAME ON TOP-LEFT */
@@ -78,7 +79,7 @@
   transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.4s ease;
 }
 
-/* Menu links styling (same as before) */
+/* Menu links styling */
 .menu a {
   padding: 12px 20px;
   color: white;
@@ -95,6 +96,7 @@
   transform: translateX(0);
   opacity: 1;
 }
+
 /* HERO SECTION */
 .hero {
   height: 60vh;
