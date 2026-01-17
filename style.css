@@ -9,29 +9,34 @@
 .navbar {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   width: 100%;
   padding: 20px 30px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   z-index: 100;
+  justify-content: space-between;
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.2rem;
   color: white;
+  position: relative;
+  z-index: 101;
 }
 
-/* MENU */
+/* MENU CONTAINER */
 .menu-container {
   position: relative;
 }
 
+/* HAMBURGER */
 .hamburger {
   width: 25px;
   cursor: pointer;
+  position: relative;
+  z-index: 101;
 }
 
 .hamburger span {
@@ -39,22 +44,26 @@
   height: 3px;
   background: white;
   margin: 5px 0;
+  transition: all 0.3s ease;
 }
 
-/* DROPDOWN */
+/* MENU */
 .menu {
-  position: absolute;
-  top: 35px;
-  right: 0;
-  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 60px; /* under the logo */
+  left: -200px; /* hidden outside the left */
+  width: 180px;
+  background: rgba(0,0,0,0.95);
   border-radius: 6px;
-  display: none;
-  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.3s ease;
+  padding: 10px 0;
+  z-index: 100;
 }
 
 .menu a {
-  display: block;
-  padding: 12px 16px;
+  padding: 12px 20px;
   color: white;
   text-decoration: none;
 }
@@ -63,9 +72,9 @@
   background: #0077ff;
 }
 
-/* HOVER OPEN */
+/* SLIDE-IN ON HOVER */
 .menu-container:hover .menu {
-  display: block;
+  left: 10px; /* slides in from left */
 }
 
 /* HERO SECTION */
