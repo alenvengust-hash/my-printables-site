@@ -8,63 +8,46 @@
 /* SMALL TOP BANNER */
 .small-banner {
   width: 100%;
-  height: 40px; /* small banner height */
-  background-color: #f5f5f5; /* light gray / white */
+  height: 30px; /* very small */
+  background-color: #f5f5f5; /* white/light gray */
 }
 
-/* MAIN ORANGE BANNER */
-.main-banner {
+/* BIG COLORED BANNER */
+.big-banner {
   width: 100%;
-  height: 60vh; /* main banner height */
-  background-color: #ff9900;
-  background-image: url("https://images.unsplash.com/photo-1518773553398-650c184e0bb3");
-  background-size: cover;
-  background-position: center;
+  height: 250px; /* bigger banner */
+  background-color: #ff9900; /* orange, can change color */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-align: center;
+  color: white;
 }
 
-.main-banner::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45); /* dark overlay for text readability */
-}
-
-.main-banner-content {
-  position: relative;
+.big-banner-content {
   z-index: 1;
 }
 
-.main-banner h1 {
-  font-size: 3rem;
+.big-banner-content h1 {
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-.main-banner p {
-  font-size: 1.5rem;
+.big-banner-content p {
+  font-size: 1.2rem;
   opacity: 0.9;
 }
 
-/* NAVBAR (inside orange banner) */
+/* HAMBURGER MENU */
 .navbar {
   position: absolute;
-  top: 20px; /* inside main banner */
-  left: 20px;
+  top: 10px;
+  right: 20px; /* top-right corner */
   display: flex;
   align-items: center;
   gap: 20px;
-  z-index: 10;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
+  z-index: 10; /* in front of everything */
 }
 
 /* MENU */
@@ -89,11 +72,11 @@
 .menu {
   position: absolute;
   top: 35px;
-  left: -200px;
+  right: 0; /* align menu to right */
   width: 180px;
   background: rgba(0,0,0,0.95);
   border-radius: 6px;
-  transition: left 0.3s ease;
+  transition: right 0.3s ease;
   padding: 10px 0;
   display: flex;
   flex-direction: column;
@@ -110,7 +93,7 @@
 }
 
 .menu-container:hover .menu {
-  left: 0;
+  right: 0; /* slide in */
 }
 
 /* HERO SECTION */
@@ -201,4 +184,3 @@
   background: #111;
   color: white;
 }
-
