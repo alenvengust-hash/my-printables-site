@@ -60,38 +60,16 @@
   flex-direction: column;
   padding: 10px 0;
   
-  /* Start off-screen */
-  transform: translateX(100%);
-  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  /* Fully hidden off-screen to the right */
+  transform: translateX(110%);  /* move it completely off-screen */
+  opacity: 0;                  /* hide visually */
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.4s ease;
 }
 
-.menu a {
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  background: #0077ff;
-}
-
-/* Hover effect: slide menu in */
+/* Hover effect: slide menu in when hovering on hamburger */
 .menu-container:hover .menu {
-  transform: translateX(0);
-}
-
-.menu a {
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
-}
-
-.menu a:hover {
-  background: #0077ff;
-}
-
-.menu-container:hover .menu {
-  right: 0;
+  transform: translateX(0); /* slide in */
+  opacity: 1;               /* make fully visible */
 }
 
 /* HERO SECTION */
