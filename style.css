@@ -26,11 +26,11 @@
 /* PRINTIUM NAME ON TOP-LEFT */
 .orange-banner .logo {
   position: absolute;
-  top: 15px;
+  top: 20px;
   left: 20px;
   color: white;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   z-index: 3; /* in front of banner */
 }
 
