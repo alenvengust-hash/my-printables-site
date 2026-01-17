@@ -5,6 +5,69 @@
   font-family: Arial, sans-serif;
 }
 
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+}
+
+/* MENU */
+.menu-container {
+  position: relative;
+}
+
+.hamburger {
+  width: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+}
+
+/* DROPDOWN */
+.menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 6px;
+  display: none;
+  min-width: 140px;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: #0077ff;
+}
+
+/* HOVER OPEN */
+.menu-container:hover .menu {
+  display: block;
+}
+
 /* HERO SECTION */
 .hero {
   height: 100vh;
