@@ -5,41 +5,77 @@
   font-family: Arial, sans-serif;
 }
 
-/* TOP BANNER SECTION */
-.top-banner {
+/* SMALL TOP BANNER */
+.small-banner {
   width: 100%;
-  height: 60px;               /* height of the banner section */
-  background-color: #ff9900;  /* banner color */
+  height: 40px; /* small banner height */
+  background-color: #f5f5f5; /* light gray / white */
 }
 
-/* NAVBAR */
-.navbar {
-  position: fixed;
-  top: 60px; /* below top banner */
-  left: 20px;
-  z-index: 100;
+/* MAIN ORANGE BANNER */
+.main-banner {
+  width: 100%;
+  height: 60vh; /* main banner height */
+  background-color: #ff9900;
+  background-image: url("https://images.unsplash.com/photo-1518773553398-650c184e0bb3");
+  background-size: cover;
+  background-position: center;
+  position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.main-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45); /* dark overlay for text readability */
+}
+
+.main-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.main-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.main-banner p {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+/* NAVBAR (inside orange banner) */
+.navbar {
+  position: absolute;
+  top: 20px; /* inside main banner */
+  left: 20px;
+  display: flex;
+  align-items: center;
   gap: 20px;
+  z-index: 10;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: white;
-  z-index: 101;
 }
 
-/* MENU CONTAINER */
+/* MENU */
 .menu-container {
   position: relative;
 }
 
-/* HAMBURGER */
 .hamburger {
   width: 25px;
   cursor: pointer;
-  z-index: 101;
+  z-index: 11;
 }
 
 .hamburger span {
@@ -50,19 +86,17 @@
   transition: all 0.3s ease;
 }
 
-/* MENU */
 .menu {
   position: absolute;
   top: 35px;
-  left: -200px; /* hidden initially off screen */
+  left: -200px;
   width: 180px;
   background: rgba(0,0,0,0.95);
   border-radius: 6px;
-  flex-direction: column;
   transition: left 0.3s ease;
   padding: 10px 0;
   display: flex;
-  z-index: 100;
+  flex-direction: column;
 }
 
 .menu a {
@@ -75,14 +109,13 @@
   background: #0077ff;
 }
 
-/* SLIDE-IN ON HOVER */
 .menu-container:hover .menu {
-  left: 0; /* slide in under logo */
+  left: 0;
 }
 
 /* HERO SECTION */
 .hero {
-  height: 100vh;
+  height: 60vh;
   background-image: url("https://images.unsplash.com/photo-1581092334494-1e7f7c0a1e9c");
   background-size: cover;
   background-position: center;
@@ -108,14 +141,13 @@
 }
 
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 30px;
-  opacity: 0.9;
 }
 
 /* BUTTONS */
@@ -152,7 +184,7 @@
   color: black;
 }
 
-/* SECTIONS */
+/* EXPLORE / ABOUT SECTIONS */
 .section {
   padding: 80px 20px;
   max-width: 1000px;
