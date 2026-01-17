@@ -25,9 +25,9 @@
 /* HAMBURGER MENU ON TOP-RIGHT */
 .navbar {
   position: absolute;
-  top: 15px;          /* distance from top of banner */
-  right: 15px;        /* distance from right of banner */
-  z-index: 3;         /* stay on top of banner */
+  top: 15px;
+  right: 15px;
+  z-index: 3;
 }
 
 .menu-container {
@@ -35,20 +35,21 @@
 }
 
 .hamburger {
-  width: 30px;        /* width of hamburger */
-  cursor: pointer;    /* pointer on hover */
+  width: 25px;        
+  cursor: pointer;
 }
 
 .hamburger span {
   display: block;
-  height: 3px;         /* thickness of each line */
-  background: white;   /* color of lines */
-  margin: 7px 0;       /* spacing between lines */
-  border-radius: 2px;  /* rounded corners for smooth lines */
-  transition: all 0.3s ease; /* smooth hover/animation transition */
+  height: 3px;         
+  width: 25px;         
+  background: white;   
+  margin: 8px 0;       
+  border-radius: 3px;  
+  transition: all 0.3s ease;
 }
 
-/* DROPDOWN MENU */
+/* DROPDOWN MENU - hidden by default */
 .menu {
   position: absolute;
   top: 40px;           
@@ -59,19 +60,30 @@
   display: flex;
   flex-direction: column;
   padding: 10px 0;
-  
-  /* Fully hidden off-screen to the right */
-  transform: translateX(110%);  /* move it completely off-screen */
-  opacity: 0;                  /* hide visually */
+
+  /* HIDDEN */
+  transform: translateX(110%);
+  opacity: 0;
   transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.4s ease;
 }
 
-/* Hover effect: slide menu in when hovering on hamburger */
-.menu-container:hover .menu {
-  transform: translateX(0); /* slide in */
-  opacity: 1;               /* make fully visible */
+/* Menu links styling (same as before) */
+.menu a {
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
+.menu a:hover {
+  background: #0077ff;
+}
+
+/* SHOW MENU on hover of hamburger */
+.menu-container:hover .menu {
+  transform: translateX(0);
+  opacity: 1;
+}
 /* HERO SECTION */
 .hero {
   height: 60vh;
