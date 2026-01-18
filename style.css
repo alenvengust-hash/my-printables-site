@@ -109,34 +109,35 @@
 
 /* HERO SECTION - FULL SCREEN */
 .hero {
-  height: 100vh; /* full viewport height */
-  min-height: 500px; /* optional: avoid too small on short screens */
+  width: 100%;            /* make sure it spans full width */
+  height: 100vh;           /* full viewport height */
+  min-height: 500px;       /* optional: avoid too small on very short screens */
   background-image: url("https://images.unsplash.com/photo-1581092334494-1e7f7c0a1e9c");
-  background-size: cover;
+  background-size: cover;  /* fill container without stretching */
   background-position: center;
-  background-attachment: fixed; /* optional: parallax effect */
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   color: var(--white);
+  overflow: hidden;        /* prevent extra scroll inside hero */
 }
 
 .hero::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: rgba(31, 41, 51, 0.75); /* overlay for readability */
+  inset: 0;                /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(31, 41, 51, 0.55); /* overlay for readability */
 }
 
 .hero-content {
   position: relative;
+  z-index: 2;              /* stay above overlay */
   text-align: center;
   max-width: 700px;
   padding: 20px;
-  z-index: 2; /* make sure content is above overlay */
 }
-
 
 /* BUTTONS */
 .hero-buttons {
